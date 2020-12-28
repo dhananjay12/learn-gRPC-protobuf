@@ -1,7 +1,7 @@
 package com.mynotes.protobuf;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mynotes.models.Person;
+import com.mynotes.models.basic.Person;
 import com.mynotes.protobuf.json.PersonJson;
 
 public class PerformanceTest {

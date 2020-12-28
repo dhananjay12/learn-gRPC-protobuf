@@ -1,6 +1,6 @@
-package com.mynotes.protobuf;
+package com.mynotes.protobuf.basic;
 
-import com.mynotes.models.Person;
+import com.mynotes.models.basic.Person;
 
 public class PersonTest {
 

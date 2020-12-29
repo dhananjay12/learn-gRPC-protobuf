@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.mynotes.models.enums;
+
+option java_multiple_files = true;
+
+message Person{
+
+  string fName = 1;
+
+  string lName = 2;
+
+  int32 age = 3;
+
+  enum EyeColour {
+    UNKNOWN_EYE_COLOUR = 0;
+    BROWN = 1;
+    BLUE = 2;
+    GREEN = 3;
+  }
+
+  EyeColour eyeColour = 4;
+}

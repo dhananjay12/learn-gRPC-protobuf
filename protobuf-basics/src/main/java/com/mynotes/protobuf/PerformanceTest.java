@@ -17,6 +17,7 @@ public class PerformanceTest {
             try {
                 byte[] bytes = mapper.writeValueAsBytes(personJson);
                 PersonJson personJsonResult = mapper.readValue(bytes, PersonJson.class);
+                personJsonResult.getAge();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -29,6 +30,7 @@ public class PerformanceTest {
             try {
                 byte[] bytes = person.toByteArray();
                 Person personResult = Person.parseFrom(bytes);
+                personResult.getAge();
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package com.mynotes.models.defaults;
+
+option java_multiple_files = true;
+
+message Person{
+
+  string fName = 1;
+
+  string lName = 2;
+
+  int32 age = 3;
+
+  enum EyeColour {
+    UNKNOWN_EYE_COLOUR = 0;
+    BROWN = 1;
+    BLUE = 2;
+    GREEN = 3;
+  }
+
+  EyeColour eyeColour = 4;
+
+  message Address {
+    int32 houseNumber =1;
+    string zipCode = 2;
+    string city = 3;
+    string country = 4;
+  }
+
+  repeated Address addresses = 5;
+
+  Date birthday = 6;
+}
+
+
+
+message Date {
+
+  // Must be from 1 to 31
+  int32 day = 1;
+
+  //Must be from 1 to 12
+  int32 month = 2;
+
+  int32 year = 3;
+
+}

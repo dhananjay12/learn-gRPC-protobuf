@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.mynotes.importing.models;
+
+import "importing/commons/date.proto";
+
+option java_multiple_files = true;
+
+message Person{
+
+  string fName = 1;
+
+  string lName = 2;
+
+  int32 age = 3;
+
+  com.mynotes.importing.commons.Date birthday = 4;
+}

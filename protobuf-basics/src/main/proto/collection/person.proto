@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.mynotes.models.collection;
+
+option java_multiple_files = true;
+//option java_package = "com.mynotes.models.composition";
+// Nested Address instead of separate
+
+message Person{
+
+  string fName = 1;
+
+  string lName = 2;
+
+  int32 age = 3;
+
+  message Address {
+    int32 houseNumber =1;
+    string zipCode = 2;
+    string city = 3;
+    string country = 4;
+  }
+
+  repeated Address addresses = 4;
+}

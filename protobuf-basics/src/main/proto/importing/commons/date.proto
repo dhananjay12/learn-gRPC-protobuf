@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.mynotes.importing.commons;
+
+option java_multiple_files = true;
+
+message Date {
+
+  // Must be from 1 to 31
+  int32 day = 1;
+
+  //Must be from 1 to 12
+  int32 month = 2;
+
+  int32 year = 3;
+
+}

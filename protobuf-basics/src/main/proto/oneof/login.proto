@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.mynotes.models.oneof;
+
+option java_multiple_files = true;
+
+message EmailLogin {
+
+  string email = 1;
+  string password = 2;
+}
+
+message PhoneLogin {
+
+  int32 number = 1;
+  int32 code = 2;
+
+}
+
+message Login {
+
+  oneof method { // can be any name
+    EmailLogin emailMode = 1;
+    PhoneLogin phoneMode = 2 ;
+  }
+
+}

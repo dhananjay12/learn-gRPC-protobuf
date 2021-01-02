@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.mynotes.models.maps;
+
+option java_multiple_files = true;
+
+message Person {
+
+  string fName = 1;
+
+  string lName = 2;
+
+  int32 age = 3;
+}
+
+message Ranks {
+  map<int32, Person> ranks = 1;
+}

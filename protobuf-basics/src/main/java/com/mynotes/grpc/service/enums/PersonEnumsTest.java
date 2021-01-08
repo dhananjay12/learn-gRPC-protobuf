@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.enums;
+package com.mynotes.grpc.service.enums;
 
 import com.mynotes.models.enums.Person;
 import com.mynotes.models.enums.Person.EyeColour;

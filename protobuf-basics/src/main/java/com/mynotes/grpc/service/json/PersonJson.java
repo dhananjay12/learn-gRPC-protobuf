@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.json;
+package com.mynotes.grpc.service.json;
 
 public class PersonJson {
 

@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.oneof;
+package com.mynotes.grpc.service.oneof;
 
 import com.mynotes.models.oneof.EmailLogin;
 import com.mynotes.models.oneof.Login;

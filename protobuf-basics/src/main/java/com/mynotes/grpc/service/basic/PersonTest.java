@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.basic;
+package com.mynotes.grpc.service.basic;
 
 import com.mynotes.models.basic.Person;
 

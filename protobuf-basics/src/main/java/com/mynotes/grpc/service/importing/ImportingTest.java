@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.importing;
+package com.mynotes.grpc.service.importing;
 
 import com.mynotes.importing.commons.Date;
 import com.mynotes.importing.models.Person;

@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.maps;
+package com.mynotes.grpc.service.maps;
 
 import com.mynotes.models.maps.Person;
 import com.mynotes.models.maps.Ranks;

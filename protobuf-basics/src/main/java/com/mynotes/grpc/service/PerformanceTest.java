@@ -1,8 +1,8 @@
-package com.mynotes.protobuf;
+package com.mynotes.grpc.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mynotes.models.basic.Person;
-import com.mynotes.protobuf.json.PersonJson;
+import com.mynotes.grpc.service.json.PersonJson;
 
 public class PerformanceTest {
 

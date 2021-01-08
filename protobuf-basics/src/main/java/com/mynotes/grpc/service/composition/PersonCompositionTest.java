@@ -1,4 +1,4 @@
-package com.mynotes.protobuf.composition;
+package com.mynotes.grpc.service.composition;
 
 import com.mynotes.models.composition.Person;
 import com.mynotes.models.composition.Date;

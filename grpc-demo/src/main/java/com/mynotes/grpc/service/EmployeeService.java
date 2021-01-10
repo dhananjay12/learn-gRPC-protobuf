@@ -1,5 +1,6 @@
 package com.mynotes.grpc.service;
 
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 
 public class EmployeeService extends EmployeeServiceGrpc.EmployeeServiceImplBase {
@@ -20,6 +21,12 @@ public class EmployeeService extends EmployeeServiceGrpc.EmployeeServiceImplBase
     public void list(EmployeeListRequest request, StreamObserver<Employee> responseObserver) {
         int count = request.getCount();
 
+        if (count <= 0){
+            Status status = Status.INVALID_ARGUMENT.withDescription("Count has to be greater than 0");
+            responseObserver.onError(status.asRuntimeException());
+            return;
+        }
+
         for (int i = 1; i <= count; i++) {
             Employee employee = Employee.newBuilder()
                 .setId(i)
@@ -34,5 +41,15 @@ public class EmployeeService extends EmployeeServiceGrpc.EmployeeServiceImplBase
         }
 
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public StreamObserver<EmployeeCreateRequest> create(StreamObserver<EmployeeCreateResponse> responseObserver) {
+        return new EmployeeStreamRequest(responseObserver);
+    }
+
+    @Override
+    public StreamObserver<EmployeeCreateRequest> createBiStream(StreamObserver<Employee> responseObserver) {
+        return new EmployeeBiStreamRequest(responseObserver);
     }
 }

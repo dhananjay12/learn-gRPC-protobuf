@@ -17,11 +17,26 @@ message Employee {
   string lName = 3;
 }
 
+message EmployeeCreateRequest {
+  string fName = 1;
+  string lName = 2;
+}
+
+message EmployeeCreateResponse {
+  int32 createdEmployees = 1;
+}
+
 service EmployeeService {
   //unary
   rpc details(EmployeeDetailsRequest) returns (Employee);
 
   // server-side streaming
-  rpc list(EmployeeListRequest) returns(stream Employee);
+  rpc list(EmployeeListRequest) returns (stream Employee);
+
+  //client-side streaming
+  rpc create(stream EmployeeCreateRequest) returns (EmployeeCreateResponse);
+
+  //bi-directional streaming
+  rpc createBiStream(stream EmployeeCreateRequest) returns (stream Employee);
 
 }

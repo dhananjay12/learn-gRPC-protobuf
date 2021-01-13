@@ -1,0 +1,5 @@
+grpc:
+  client:
+    grpc-api:
+      address: static://localhost:3009
+      negotiationType: plaintext
